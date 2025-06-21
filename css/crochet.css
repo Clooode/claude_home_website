@@ -1,0 +1,176 @@
+/* Layout for pinboard */
+.pinboard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem;
+  background-color: #fdfdfd;
+}
+
+/* Each pin card */
+.pin-wrapper {
+  position: relative;
+  width: 25%;
+  aspect-ratio: 1 / 1;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* Tape styles */
+.tape {
+  position: absolute;
+  width: 15%;
+  height: auto;
+  opacity: 0.85;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.top-left {
+  top: -5%;
+  left: -5%;
+  transform: rotate(-45deg);
+}
+
+.top-right {
+  top: -5%;
+  right: -5%;
+  transform: rotate(45deg);
+}
+
+/* Clickable pin image */
+.pin img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+/* Zoom on hover */
+.pin:hover img {
+  transform: scale(1.05);
+}
+
+/* Caption under image */
+.caption {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255,255,255,0.85);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  color: #333;
+  font-size: 1rem;
+  z-index: 1;
+}
+
+body {
+  background-color: #8b1c36;
+}
+header {
+  background-color: #d6ecd6; /* soft pale green */
+  color: #1e5631;
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin: 2rem auto;
+  width: fit-content;
+  box-shadow: 0 0 12px rgba(0,0,0,0.08);
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #d6ecd6;
+  color: #333;
+  font-size: 0.95rem;
+  margin-top: 3rem;
+  border-radius: 12px 12px 0 0;
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  text-decoration: none;
+  background-color: #ffccd5;
+  color: #4d4d4d;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-weight: bold;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  transition: background-color 0.2s ease;
+}
+
+:root {
+  --body-font:  'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+                Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
+                'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+body {
+  font-family: var(--body-font);
+}
+
+
+body {
+  margin: 0;
+  background-color: #fffaf3;
+  font-family: 'Quicksand', sans-serif;
+  color: #5D2B09;
+}
+
+header {
+  text-align: center;
+  padding: 2rem;
+  background-color: #fdf2e9;
+  border-bottom: 2px dashed #deb887;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  justify-items: center;
+}
+
+figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 300px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+figcaption {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: #444;
+  text-align: center;
+}
+

@@ -1,0 +1,144 @@
+:root {
+  --body-font:  'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+                Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji',
+                'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+
+
+body {
+  margin: 0;
+  font-family: var(--body-font);
+  background-color: #fff9f3;
+  background-size: cover;
+  color: #77153c;
+}
+
+header {
+  background-color: #ffe6eb;
+  padding: 2rem;
+  text-align: center;
+  border-bottom: 5px dotted #f8bacf;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+header p {
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+.intro {
+  position: relative;
+  padding: 2rem;
+  background-color: #ffe6eb;
+  border-left: 10px solid #f8bacf;
+  margin: 2rem;
+  border-radius: 15px;
+  
+}
+
+.bear-img {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 200px;
+  filter: blur(0.5x); /* gives it a soft fuzzy look */
+  border-radius: 20%; /* makes the edges more rounded */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* optional soft glow */
+}
+
+
+.food-img {
+  width: 190px;
+  display: block;
+  margin: 0 auto;
+  filter: blur(0.5px); /* fixed typo: should be 'px', not 'x' */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+figure {
+  display: block;
+  text-align: center;
+  margin: 1.5em auto;
+  left:50%
+
+}
+
+figcaption {
+  font-size: 0.9em;
+  color: #555;
+  font-style: italic;
+  margin-top: 0.5em;
+}
+
+.menu {
+  background-color: #fef6ec;
+  padding: 2rem;
+  margin: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(100, 50, 0, 0.2);
+}
+
+.menu h2 {
+  display: inline;
+  background-image: linear-gradient(#f5acc9, #c2185b);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 2px;
+  padding-bottom: 4px;
+  
+}
+
+
+.intro ul {
+  list-style-type: "🍪 ";
+  padding-left: 1rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #d0f0c0;
+  font-weight: bold;
+}
+
+.box {
+  background: linear-gradient(135deg, #ffccd5, #d0f0c0);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.1);
+  color: #3d2c2e;
+  font-size: 16px;
+  position: relative;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 20px;
+  color: #c2185b;
+  margin-bottom: 10px;
+}
+
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  text-decoration: none;
+  background-color: #ffccd5;
+  color: #4d4d4d;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-weight: bold;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  transition: background-color 0.2s ease;
+}
+
+.back-button:hover {
+  background-color: #d0f0c0;
+  
+}

@@ -1,0 +1,144 @@
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  margin: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+header {
+  background-color: #1e5631;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.subtitle {
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #d4efdf;
+}
+
+.about {
+  width: 80%;
+  margin-bottom: 0rem;
+  margin: 4rem auto;
+  padding: 2rem;
+  background-color: #f1f8f4;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+}
+
+.profile-img {
+  width: 150px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 200px;
+}
+
+
+
+h2 {
+  color: #1e5631;
+    font-weight: bold;
+
+}
+
+.content {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+
+.content h2 {
+  color:#3a3a3a;
+}
+
+
+.content {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.content ul {
+  padding-left: 2rem;
+  margin-top: 1rem;
+  color: #3a3a3a; /* sleek dark gray */
+  list-style-type: disc;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.content li {
+  margin-bottom: 0.6rem;
+  padding-left: 0.5rem;
+  border-left: 3px solid #1e5631; /* optional green accent line */
+}
+
+
+a {
+  color: #1e5631;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline dotted;
+}
+
+footer {
+  background-color: #1e5631;
+  color: #ccc;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+.back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  text-decoration: none;
+  background-color: #ffccd5;
+  color: #4d4d4d;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-weight: bold;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  transition: background-color 0.2s ease;
+}
+
+.back-button:hover {
+  background-color: #d0f0c0;
+  
+}
+
+figure {
+  display: block;
+  text-align: center;
+  margin: 1.5em auto;
+  left:50%
+
+}
+
+figcaption {
+  font-size: 0.9em;
+  color: #555;
+  font-style: italic;
+  margin-top: 0.5em;
+}
+
+.img {
+  width: 500px;
+  display: block;
+  margin: 0 auto;
+  filter: blur(0.5px); /* fixed typo: should be 'px', not 'x' */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}

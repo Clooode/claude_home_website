@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-  const birdIcon = document.getElementById('icon-snoot');
+  const birdIcon = document.getElementById('icon-bears');
   if (birdIcon) {
     birdIcon.addEventListener('click', function () {
       alert("Oops! This page isn't ready yet — check back soon 🐻");

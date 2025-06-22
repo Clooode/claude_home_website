@@ -54,7 +54,7 @@ body {
 #icon-birds   { top: 56%; left: 70%; width: 8%; opacity: 50%;}
 #icon-baking  { top: 66%; left: 45%; width: 10% ;}
 #icon-work    { top: 15%; left: 15%; width: 30%;  }
-#icon-bears   { top: 39.5%; left: 57.1%; width: 2.7% ; opacity: 50%; }
+#icon-bears   { top: 39.5%; left: 57.1%; width: 2.7% ;  }
 
 .dust-container {
   position: absolute;
@@ -71,12 +71,12 @@ body {
   height: 8px;
   border-radius: 50%;
   background: radial-gradient(circle, rgba(255, 236, 170, 0.4) 0%, rgba(255, 214, 130, 0.15) 80%);
-  animation: drift 14s infinite ease-in-out;
+  animation: drift 10s infinite ease-in-out;
 }
 
 @keyframes drift {
   0%   { transform: translateY(0) scale(1); opacity: 0.2; }
-  50%  { transform: translateY(-20px) scale(1.4); opacity: 0.4; }
+  50%  { transform: translateY(-20px) scale(1.4); opacity: 0.6; }
   100% { transform: translateY(-50px) scale(1); opacity: 0.1; }
 }
 
@@ -91,4 +91,9 @@ body {
 .mote-8 { top: 30%; left: 90%; animation-delay: 3.5s; }
 .mote-9 { top: 15%; left: 50%; animation-delay: 1.5s; }
 .mote-10{ top: 75%; left: 70%; animation-delay: 4.5s; }
+.mote-11 { top: 5%; left: 20%; animation-delay: 2.2s; }
+.mote-12 { top: 45%; left: 75%; animation-delay: 1.8s; }
+.mote-13 { top: 25%; left: 5%; animation-delay: 3.2s; }
+.mote-14 { top: 70%; left: 95%; animation-delay: 0.8s; }
+.mote-15 { top: 38%; left: 33%; animation-delay: 2.7s; }
 

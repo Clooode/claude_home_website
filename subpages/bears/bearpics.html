@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bear Photo Gallery</title>
+
+  <body>
+            <a href="../../index.html" class="back-button">← Back</a>
+  <header>
+    <h1>My Bear Pics</h1>
+    
+  </header>
+  <link rel="stylesheet" href="../../css/styles.css" />
+    <link rel="stylesheet" href="../../css/bear.css" />
+</head>
+<body>
+
+<div class="bear-container">
+    <h2>Sunbear Photos</h2>
+
+  <div id="sunbear-carousel" class="carousel"></div>
+</div>
+
+
+<div class="bear-container">
+    <h2>Panda Photos</h2>
+
+  <div id="panda-carousel" class="carousel"></div>
+</div>
+
+
+
+  <!-- Generated image arrays -->
+  <script src="../../js/pandaList.js"></script>
+  <script src="../../js/sunbearList.js"></script>
+
+  <script>
+    function populateCarousel(id, photoArray) {
+      const carousel = document.getElementById(id);
+      photoArray.forEach(src => {
+        const img = document.createElement("img");
+        img.src = src;
+        carousel.appendChild(img);
+      });
+    }
+
+    populateCarousel("panda-carousel", pandaPhotos);
+    populateCarousel("sunbear-carousel", sunbearPhotos);
+
+function scrollCarousel(id, direction) {
+  const carousel = document.getElementById(id);
+  const scrollAmount = carousel.offsetWidth / 1.5;
+  carousel.scrollBy({
+    left: direction * scrollAmount,
+    behavior: "smooth"
+  });
+}
+</script>
+
+<body>
+  <p class="center-text"><i>Photos taken at the Mandai National Wildlife Park, Singapore, on the 12th of June 2025.</i></p>
+</body>
+
+<footer>Last updated by Dr Claude Cox, June 2025.</footer>
+
+</body>
+</html>

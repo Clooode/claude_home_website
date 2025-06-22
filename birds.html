@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Bird Sightings Map</title>
+  <link rel="stylesheet" href="css/bird.css" />
+</head>
+    <a href="index.html" class="back-button">← Back</a>
+
+<header  id="header"> <h1>My Bird Mapping Journey</h1>
+</header>
+<body>
+<section>
+  <div class="map-container">
+    <!-- Inline or embedded SVG -->
+    <object
+      type="image/svg+xml"
+      data="assets/svg/world-map.svg"
+      id="bird-map"
+      aria-label="Clickable Bird Map"
+      style="width: 100%; height: auto;"
+    ></object>
+<div id="sg-pin" >
+  <div class="pin-head"></div>
+  <div class="pin-label">Singapore</div>
+</div>
+
+  </div>
+  </section>
+  <section>
+
+
+<div id="card-container" class="card-grid"></div> 
+
+<div id="info-panel" class="info-panel"></div>
+</section>
+
+
+
+  <script type="module" src="js/bird_fetch.js"></script>
+
+  <p class="center-text"><i>Photos taken over many years across the world.</i></p>
+</body>
+
+<footer>Last updated by Dr Claude Cox, June 2025.</footer>
+</html>

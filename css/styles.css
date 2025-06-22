@@ -51,10 +51,11 @@ body {
 
 
 #icon-crochet { top: 66%; left: 66%; width: 8%;}
-#icon-birds   { top: 56%; left: 70%; width: 8%; opacity: 50%;}
+#icon-birds   { top: 56%; left: 70%; width: 8%; }
 #icon-baking  { top: 66%; left: 45%; width: 10% ;}
 #icon-work    { top: 15%; left: 15%; width: 30%;  }
 #icon-bears   { top: 39.5%; left: 57.1%; width: 2.7% ;  }
+#icon-contact   { top: 8%; left: 75%; width: 9% ;  }
 
 .dust-container {
   position: absolute;

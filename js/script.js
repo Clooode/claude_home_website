@@ -27,3 +27,23 @@ document.getElementById('icon-birds').addEventListener('click', function() {
 document.getElementById('icon-contact').addEventListener('click', function() {
   window.location.href = 'contact.html';
 });
+
+let inactivityTimer;
+const nudge = document.getElementById('nudge-box');
+
+function showNudge() {
+  nudge.classList.add('visible');
+}
+
+function resetInactivityTimer() {
+  clearTimeout(inactivityTimer);
+  nudge.classList.remove('visible');
+  inactivityTimer = setTimeout(showNudge, 20000); // 20 seconds
+}
+
+['click', 'mousemove', 'keydown', 'touchstart'].forEach(event =>
+  document.addEventListener(event, resetInactivityTimer)
+);
+
+// Start timer on load
+resetInactivityTimer();

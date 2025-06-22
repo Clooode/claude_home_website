@@ -12,56 +12,95 @@
   </header>
   <link rel="stylesheet" href="../../css/styles.css" />
     <link rel="stylesheet" href="../../css/bear.css" />
+
+      <script src="../../js/pandaList.js"></script>
+  <script src="../../js/sunbearList.js"></script>
 </head>
 <body>
 
-<div class="bear-container">
-    <h2>Sunbear Photos</h2>
+<div class="carousel-wrapper">
+  <button class="nav" onclick="scrollCarousel('sunbear-carousel', -1)">‹</button>
 
-  <div id="sunbear-carousel" class="carousel"></div>
+  <h2>Malaysian Sun Bear</h2>
+  <div class="carousel" id="sunbear-carousel"></div>
+
+
+  <button class="nav" onclick="scrollCarousel('sunbear-carousel', 1)">›</button>
+</div>
+
+<div class="carousel-wrapper">
+  <button class="nav" onclick="scrollCarousel('panda-carousel', -1)">‹</button>
+
+  <h2>Giant Panda</h2>
+    <div class="carousel" id="panda-carousel"></div>
+
+
+  <button class="nav" onclick="scrollCarousel('panda-carousel', 1)">›</button>
 </div>
 
 
-<div class="bear-container">
-    <h2>Panda Photos</h2>
 
-  <div id="panda-carousel" class="carousel"></div>
-</div>
+  <p class="center-text"><i>Photos taken at the Mandai National Wildlife Park, Singapore, on the 12th of June 2025.</i></p>
 
-
-
-  <!-- Generated image arrays -->
-  <script src="../../js/pandaList.js"></script>
-  <script src="../../js/sunbearList.js"></script>
 
   <script>
-    function populateCarousel(id, photoArray) {
-      const carousel = document.getElementById(id);
-      photoArray.forEach(src => {
-        const img = document.createElement("img");
-        img.src = src;
-        carousel.appendChild(img);
-      });
-    }
+  // This assumes sunbearPhotos is available from sunbearList.js
+  function populateCarousel(id, photoArray) {
+    const carousel = document.getElementById(id);
+    photoArray.forEach(src => {
+      const wrapper = document.createElement("div");
+      wrapper.className = "img-wrapper";
 
-    populateCarousel("panda-carousel", pandaPhotos);
-    populateCarousel("sunbear-carousel", sunbearPhotos);
+      const img = document.createElement("img");
+      img.src = src;
 
-function scrollCarousel(id, direction) {
-  const carousel = document.getElementById(id);
-  const scrollAmount = carousel.offsetWidth / 1.5;
-  carousel.scrollBy({
-    left: direction * scrollAmount,
-    behavior: "smooth"
+      wrapper.appendChild(img);
+      carousel.appendChild(wrapper);
+    });
+  }
+
+  function scrollCarousel(id, direction) {
+    const carousel = document.getElementById(id);
+    const scrollAmount = carousel.offsetWidth / 1.5;
+    carousel.scrollBy({
+      left: direction * scrollAmount,
+      behavior: "smooth"
+    });
+  }
+
+  // This line populates the sunbear carousel using the list
+  populateCarousel("sunbear-carousel", sunbearPhotos);
+  populateCarousel("panda-carousel", pandaPhotos);
+document.querySelectorAll('.img-wrapper img').forEach(img => {
+  img.addEventListener('mouseenter', () => {
+    const rect = img.getBoundingClientRect();
+    const clone = img.cloneNode();
+    clone.style.position = 'fixed';
+    clone.style.top = `${rect.top}px`;
+    clone.style.left = `${rect.left}px`;
+    clone.style.width = `${rect.width}px`;
+    clone.style.height = `${rect.height}px`;
+    clone.style.transform = `scale(3)`;
+    clone.style.transformOrigin = 'top left';
+    clone.style.zIndex = '999999';
+    clone.style.pointerEvents = 'none';
+    clone.classList.add('zoomed-img');
+
+    document.getElementById('zoom-layer').appendChild(clone);
   });
-}
-</script>
 
-<body>
-  <p class="center-text"><i>Photos taken at the Mandai National Wildlife Park, Singapore, on the 12th of June 2025.</i></p>
+  img.addEventListener('mouseleave', () => {
+    const zoomLayer = document.getElementById('zoom-layer');
+    zoomLayer.innerHTML = '';
+  });
+});
+
+
+</script>
+<div id="zoom-layer" style="position: fixed; inset: 0; pointer-events: none; z-index: 2147483647;"></div>
+
 </body>
 
 <footer>Last updated by Dr Claude Cox, June 2025.</footer>
 
-</body>
 </html>

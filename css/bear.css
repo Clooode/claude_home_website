@@ -21,7 +21,7 @@ body {
   border-radius: 20px;
   background: #fffbea;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  overflow: hidden;
+  overflow: visible;
 }
 
 .bear-container {
@@ -36,13 +36,9 @@ body {
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border: 2px solid rgba(255, 255, 255, 0.4);
-  overflow: hidden;
-  transition: transform 0.3s ease;
+  overflow: visible;
 }
 
-.bear-container:hover {
-  transform: scale(1.01);
-}
 
 header {
   background-color: #a77e62;
@@ -58,11 +54,15 @@ header {
 .carousel {
   display: flex;
   gap: 12px;
-  overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   padding: 10px;
+  overflow-y: visible;
+  overflow-x: auto;
+  position: relative;
+  isolation: isolate;
 }
+
 
 .carousel::-webkit-scrollbar {
   height: 6px;
@@ -77,12 +77,11 @@ header {
   height: 160px;
   scroll-snap-align: start;
   border-radius: 12px;
-  transition: transform 0.3s;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s, z-index 0.3s;
 }
 
-.carousel img:hover {
-  transform: scale(1.05);
-}
 
 .nav {
   background-color: #ffdab9;
@@ -108,6 +107,21 @@ header {
 body {
   font-family: var(--body-font);
 }
+.img-wrapper {
+  position: relative;
+  flex: 0 0 auto;
+  height: 160px;
+  overflow: visible;
+}
+
+.img-wrapper img {
+  height: 100%;
+  border-radius: 12px;
+  transition: transform 0.3s ease, z-index 0.3s;
+  position: relative;
+  z-index: 1;
+}
+
 
 
 
